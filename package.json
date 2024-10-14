@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shashankreddy151/personal-portfolio.git"
+    "url": "https://github.com/mldangelo/personal-site.git"
   },
   "engines": {
     "node": ">=16.x"
@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.1",
-    "@babel/plugin-transform-private-property-in-object": "^7.25.8",
     "@babel/preset-env": "^7.25.3",
     "@babel/preset-react": "^7.24.7",
     "@testing-library/jest-dom": "^5.17.0",
