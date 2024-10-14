@@ -9,7 +9,7 @@ import ScrollToTop from '../components/Template/ScrollToTop';
 
 const Main = (props) => (
   <HelmetProvider>
-    <Analytics />
+    {/* <Analytics /> */}
     <ScrollToTop />
     <Helmet
       titleTemplate="%s | Shashank Reddy"
