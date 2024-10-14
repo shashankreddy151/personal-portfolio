@@ -3,7 +3,7 @@ const os = require('os');
 module.exports = {
   env: {
     browser: true,
-    jest: true,
+    jest: false,
     node: true,
   },
   extends: 'airbnb',
