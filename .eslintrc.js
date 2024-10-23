@@ -8,9 +8,7 @@ module.exports = {
   },
   extends: 'airbnb',
   ignorePatterns: ['node_modules/', 'build/'],
-  parser: '@babel/eslint-parser', // Use Babel parser
   parserOptions: {
-    requireConfigFile: false, // This allows you to use Babel without a config file
     ecmaVersion: 2020, // Use ECMAScript 2020 features
     sourceType: 'module', // Allow using imports
     ecmaFeatures: {
