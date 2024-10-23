@@ -10,7 +10,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 
 const data = [
   {
-    link: 'https://github.com/shashankreddy151',
+    link: 'https://github.com/mldangelo',
     label: 'Github',
     icon: faGithub,
   },
@@ -40,7 +40,7 @@ const data = [
     icon: faTwitter,
   },
   {
-    link: 'mailto:shashankreddy151@outlook.com',
+    link: 'mailto:michael.l.dangelo@gmail.com',
     label: 'Email',
     icon: faEnvelope,
   },
