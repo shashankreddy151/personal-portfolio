@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this to your default branch if different
+      - main  # Adjust based on your default branch
 
 jobs:
   deploy:
@@ -13,16 +13,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build the website
-        run: |
-          # Install Node.js if you're using it
-          npm install # or your build command if using a framework
-          # Move to the root folder if needed
-          mkdir output
-          cp -r src/* output/
-      
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Use the Node.js version you need
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build  # Replace with your actual build command
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output  # Specify the output directory containing index.html
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          publish_dir: ./dist  # Adjust to your actual build output directory
