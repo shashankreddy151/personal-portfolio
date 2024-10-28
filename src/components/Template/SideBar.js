@@ -20,11 +20,12 @@ const SideBar = () => (
     
     <section className="blurb">
       <h2>About the author</h2>
-      <p>
-        Hi, I&apos;m Shashank. I am a graduate of {' '}
-        <a href="https://www.njit.edu/">New Jersey Institute of Technology</a> and a passionate
-        Machine Learning and Deep Learning Engineer based in New York City.
-      </p>
+    <p>
+      Shashank Reddy is a graduate with a Master’s degree in Data Science from the{' '}
+      <a href="https://computing.njit.edu/">Ying Wu College of Computing</a> at the{' '}
+      <a href="https://www.njit.edu/">New Jersey Institute of Technology</a>
+    </p>
+
       <ul className="actions">
         <li>
           {!window.location.pathname.includes('/resume') ? (
@@ -43,22 +44,20 @@ const SideBar = () => (
     {/* Mini Posts Section */}
     <section className="mini-posts">
       <article className="mini-post">
-        <a href="https://github.com/williamdemeo/job-app" className="">
+        <a href="" className="">
           <img src={`${PUBLIC_URL}/images/me.jpg`} alt="Working" height="250px" />
         </a>
         <header>
-          <h3><a href="https://gitlab.com/williamdemeo/job-app">Job Applications</a></h3>
+          <h3><a href="">Job Applications</a></h3>
           <span className="published">
-            <a href="https://gitlab.com/williamdemeo/job-app/-/blob/master/cv/demeo_cv.pdf">CV</a> &nbsp;
-            <a href="https://gitlab.com/williamdemeo/job-app/-/blob/master/pubs/demeo_pubs.pdf">List of Publications</a> <br />
-            <a href="https://gitlab.com/williamdemeo/job-app/-/blob/master/research/demeo_brief_research_summary.pdf">Brief Research Summary</a> &nbsp;
-            <a href="https://gitlab.com/williamdemeo/job-app/-/blob/master/teaching/demeo_brief-teaching-statement.pdf">Brief Teaching Statement</a> <br />
+            <a href="">Resume</a> &nbsp;
+            <a href="">Projects</a> <br />
+            <a href="">Certifications</a> &nbsp;
           </span>
         </header>
       </article>
     </section>
     {/* End of Mini Posts Section */}
-
 
     <section id="footer">
       <ContactIcons />

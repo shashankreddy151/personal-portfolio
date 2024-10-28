@@ -10,32 +10,42 @@ const Index = () => (
       + 'VP of Engineering at Smile Identity, co-founder of Arthena and Matroid, and YC Alumni.'
     }
   >
-    <article className="post" id="index">
-      <header>
-        <div className="title">
-          <h2>
-            <Link to="/">About this site</Link>
-          </h2>
-          <p>
-            A beautiful, responsive, statically-generated, react application
-            written with modern Javascript.
-          </p>
+    <div className="content-wrapper">
+      <article className="post" id="index">
+        <header>
+          <div className="title">
+            <h2>
+              <Link to="/">About this site</Link>
+            </h2>
+            <p>
+              A beautiful, responsive, statically-generated, react application
+              written with modern Javascript.
+            </p>
+          </div>
+        </header>
+        <p>
+          {' '}
+          Welcome to my website. Please feel free to read more{' '}
+          <Link to="/about">about me</Link>, or you can check out my{' '}
+          <Link to="/resume">resume</Link>, <Link to="/projects">projects</Link>,{' '}
+          view <Link to="/stats">site statistics</Link>, or{' '}
+          <Link to="/contact">contact</Link> me.
+        </p>
+        <p>
+          {' '}
+          Source available{' '}
+          <a href="https://github.com/shashankreddy151/personal-portfolio">here</a>.
+        </p>
+      </article>
+
+      {/* Right Section */}
+      <aside className="right-section">
+        <div className="date-info">
+          <h3>NOVEMBER 30, 2021</h3>
+          <p>Reading time: about 10 minutes (2039 words).</p>
         </div>
-      </header>
-      <p>
-        {' '}
-        Welcome to my website. Please feel free to read more{' '}
-        <Link to="/about">about me</Link>, or you can check out my{' '}
-        <Link to="/resume">resume</Link>, <Link to="/projects">projects</Link>,{' '}
-        view <Link to="/stats">site statistics</Link>, or{' '}
-        <Link to="/contact">contact</Link> me.
-      </p>
-      <p>
-        {' '}
-        Source available{' '}
-        <a href="https://github.com/shashankreddy151/personal-portfolio">here</a>.
-      </p>
-    </article>
+      </aside>
+    </div>
   </Main>
 );
 
