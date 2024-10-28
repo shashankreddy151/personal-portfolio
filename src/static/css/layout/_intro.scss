@@ -7,7 +7,7 @@
 /* Intro */
 
 #intro {
-  .logo {
+.logo {
     border-bottom: 0;
     display: inline-block;
     margin: 0 0 (_size(element-margin) * 0.5) 0;
@@ -15,11 +15,12 @@
     position: relative;
 
     img {
-      width: 10em;
-      border-radius: 50%;
-      display: block;
+        width: 8em;          /* Keep the width */
+        height: 8em;         /* Add height to make it square */
+        border-radius: 0;     /* Remove circular shape */
+        display: block;       /* Ensure it behaves like a block element */
     }
-  }
+}
 
   header {
     h2 {
