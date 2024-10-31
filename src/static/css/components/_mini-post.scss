@@ -5,7 +5,7 @@
   padding: 16px;
   margin-bottom: 12px; /* Space between items */
   border-radius: 6px; /* Rounded corners */
-  color: #ffffff; /* White text color */
+  color: #5e5e5e; /* White text color */
   transition: transform 0.2s; /* Smooth scaling on hover */
 }
 
@@ -32,7 +32,7 @@
 }
 
 .badge {
-  background-color: #2b2b2b; /* Dark badge background */
+  background-color: #000000; /* Dark badge background */
   color: #ffffff; /* White badge text */
   font-size: 0.8rem; /* Badge font size */
   padding: 2px 4px; /* Padding for badge */
@@ -55,7 +55,7 @@
 }
 
 .tag {
-  background-color: #2b2b2b; /* Tag background */
+  background-color: #464545; /* Tag background */
   color: #ffffff; /* Tag text color */
   padding: 2px 6px; /* Tag padding */
   font-size: 0.8rem; /* Tag font size */
@@ -83,7 +83,7 @@
 .forks,
 .license,
 .updated {
-  color: #b0b0b0; /* Light gray text color */
+  color: #646464; /* Light gray text color */
 }
 
 /* Star button hover effect */
@@ -93,5 +93,5 @@
 }
 
 .stars:hover {
-  color: #ffd700; /* Gold color on hover */
+  color: #000000; /* Gold color on hover */
 }

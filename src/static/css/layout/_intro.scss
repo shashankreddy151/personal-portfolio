@@ -15,8 +15,8 @@
     position: relative;
 
     img {
-        width: 8em;          /* Keep the width */
-        height: 8em;         /* Add height to make it square */
+        width: 10em;          /* Keep the width */
+        height: 10em;         /* Add height to make it square */
         border-radius: 0;     /* Remove circular shape */
         display: block;       /* Ensure it behaves like a block element */
     }
@@ -30,6 +30,7 @@
 
     p {
       font-size: 0.8em;
+      font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     }
   }
 

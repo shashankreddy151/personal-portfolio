@@ -1,24 +1,42 @@
 import dayjs from 'dayjs';
 
-/* Keys match keys returned by the github api. Fields without keys are
- * mostly jokes. To see everything returned by the github api, run:
- curl https://api.github.com/repos/mldangelo/personal-site
- */
+const githubResponse = {
+  id: 865166819,
+  node_id: "R_kgDOM5Fl4w",
+  name: "personal-portfolio",
+  full_name: "shashankreddy151/personal-portfolio",
+  private: false,
+  owner: {
+    login: "shashankreddy151",
+  },
+  html_url: "https://github.com/shashankreddy151/personal-portfolio",
+  description: null,
+  stargazers_count: 0,
+  subscribers_count: 1,
+  forks_count: 0,
+  open_issues_count: 0,
+  pushed_at: "2024-10-28T21:49:06Z",
+};
+
+// Extract relevant data from the GitHub response
 const data = [
   {
-    label: 'Stars this repository has on github',
+    label: 'Stars this repository has on GitHub',
     key: 'stargazers_count',
-    link: 'https://github.com/mldangelo/personal-site/stargazers',
+    value: githubResponse.stargazers_count || 0,
+    link: `${githubResponse.html_url}/stargazers`,
   },
   {
     label: 'Number of people watching this repository',
     key: 'subscribers_count',
-    link: 'https://github.com/mldangelo/personal-site/stargazers',
+    value: githubResponse.subscribers_count || 0,
+    link: `${githubResponse.html_url}/stargazers`,
   },
   {
     label: 'Number of forks',
-    key: 'forks',
-    link: 'https://github.com/mldangelo/personal-site/network',
+    key: 'forks_count',
+    value: githubResponse.forks_count || 0,
+    link: `${githubResponse.html_url}/network`,
   },
   {
     label: 'Number of spoons',
@@ -26,26 +44,24 @@ const data = [
   },
   {
     label: 'Number of linter warnings',
-    value: '0', // enforced via github workflow
+    value: '0',
   },
   {
-    label: 'Open github issues',
+    label: 'Open GitHub issues',
     key: 'open_issues_count',
-    link: 'https://github.com/mldangelo/personal-site/issues',
+    value: githubResponse.open_issues_count || 0,
+    link: `${githubResponse.html_url}/issues`,
   },
   {
     label: 'Last updated at',
     key: 'pushed_at',
-    link: 'https://github.com/mldangelo/personal-site/commits',
-    format: (x) => dayjs(x).format('MMMM DD, YYYY'),
+    value: dayjs(githubResponse.pushed_at).format('MMMM DD, YYYY'), // Format date
+    link: `${githubResponse.html_url}/commits`,
   },
   {
-    // TODO update this with a pre-commit hook
-    /* find . | grep ".js" | grep -vE ".min.js|node_modules|.git|.json" |
-    xargs -I file cat file | wc -l */
-    label: 'Lines of Javascript powering this website',
+    label: 'Lines of JavaScript powering this website',
     value: '2150',
-    link: 'https://github.com/mldangelo/personal-site/graphs/contributors',
+    link: `${githubResponse.html_url}/graphs/contributors`,
   },
 ];
 

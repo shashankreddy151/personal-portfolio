@@ -1,30 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TableRow = ({
-  label, link, value, format,
-}) => (
+const TableRow = ({ label, link, value }) => (
   <tr>
-    <td width="70%">{label}</td>
-    <td>{link ? <a href={link}>{format(value)}</a> : format(value)}</td>
+    <td>
+      {link ? (
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          {label}
+        </a>
+      ) : (
+        label
+      )}
+    </td>
+    <td>{value}</td>
   </tr>
 );
 
 TableRow.propTypes = {
-  format: PropTypes.func,
   label: PropTypes.string.isRequired,
   link: PropTypes.string,
-  value: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.number,
-    PropTypes.string,
-  ]),
-};
-
-TableRow.defaultProps = {
-  format: (x) => x,
-  link: null,
-  value: null,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default TableRow;

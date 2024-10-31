@@ -13,7 +13,7 @@ const SideBar = () => (
       <header>
         <h2>Shashank Reddy</h2>
         <p>
-          <a href="mailto:shashankreddy151@outlook.com">shashankreddy151@outlook.com</a>
+          <a href="mailto:shashankreddy151@outlook.com">shashankkallem@outlook.com</a>
         </p>
       </header>
     </section>
@@ -40,24 +40,6 @@ const SideBar = () => (
         </li>
       </ul>
     </section>
-
-    {/* Mini Posts Section */}
-    <section className="mini-posts">
-      <article className="mini-post">
-        <a href="" className="">
-          <img src={`${PUBLIC_URL}/images/me.jpg`} alt="Working" height="250px" />
-        </a>
-        <header>
-          <h3><a href="">Job Applications</a></h3>
-          <span className="published">
-            <a href="">Resume</a> &nbsp;
-            <a href="">Projects</a> <br />
-            <a href="">Certifications</a> &nbsp;
-          </span>
-        </header>
-      </article>
-    </section>
-    {/* End of Mini Posts Section */}
 
     <section id="footer">
       <ContactIcons />

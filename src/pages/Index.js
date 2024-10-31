@@ -37,14 +37,6 @@ const Index = () => (
           <a href="https://github.com/shashankreddy151/personal-portfolio">here</a>.
         </p>
       </article>
-
-      {/* Right Section */}
-      <aside className="right-section">
-        <div className="date-info">
-          <h3>NOVEMBER 30, 2021</h3>
-          <p>Reading time: about 10 minutes (2039 words).</p>
-        </div>
-      </aside>
     </div>
   </Main>
 );

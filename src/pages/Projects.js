@@ -1,34 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Main from '../layouts/Main';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-// Updated data structure for your projects
 const data = [
   {
     title: 'Sentiment Analysis',
     description: 'Analyzing sentiments using a Twitter dataset with Long Short-Term Memory networks.',
-    url: 'https://example.com/sentiment-analysis',
+    url: 'https://github.com/shashankreddy151/Sentiment-Analysis-on-Twitter-Airline-Sentiment-Dataset',
     tags: ['Python', 'NLP'],
     stars: 75,
   },
   {
     title: 'Face Mask Detection',
     description: 'Using OpenCV to detect whether individuals are wearing face masks.',
-    url: 'https://example.com/face-mask-detection',
+    url: 'https://github.com/shashankreddy151/Face-Mask-Detection-ML',
     tags: ['Python', 'OpenCV'],
     stars: 45,
   },
   {
     title: 'Library Management System',
     description: 'A comprehensive system for managing library operations.',
-    url: 'https://example.com/library-management-system',
+    url: 'https://github.com/shashankreddy151/Library-Management-System',
     tags: ['Java', 'Spring'],
     stars: 30,
   },
   {
     title: 'Payment-Driven Customer Experience Optimization',
     description: 'Optimizing customer experiences based on payment data analysis.',
-    url: 'https://example.com/payment-driven-optimization',
+    url: 'https://github.com/shashankreddy151/payment-driven-customer-experience-optimization',
     tags: ['JavaScript', 'Data Analysis'],
     stars: 50,
   },
@@ -50,12 +50,12 @@ const Projects = () => (
           <li key={project.title} className="project-item">
             <h3>
               <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`}>
-                {project.title}
+                {project.title} <i className="fab fa-github"></i>
               </a>
             </h3>
             <p>{project.description}</p>
             <div className="project-footer">
-              <span className="stars">⭐ {project.stars}</span>
+              <span className="stars">★ {project.stars}</span>
               <div className="project-tags">
                 {project.tags.map((tag) => (
                   <span key={tag} className="tag">{tag}</span>
