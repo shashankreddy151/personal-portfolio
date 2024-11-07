@@ -26,8 +26,8 @@ const data = [
     stars: 30,
   },
   {
-    title: 'Payment-Driven Customer Experience Optimization',
-    description: 'Optimizing customer experiences based on payment data analysis.',
+    title: 'credit-card-fraud-detection',
+    description: 'The Credit Card Fraud Detection project aims to analyze and predict fraudulent transactions using a dataset of credit card transactions.',
     url: 'https://github.com/shashankreddy151/payment-driven-customer-experience-optimization',
     tags: ['JavaScript', 'Data Analysis'],
     stars: 50,
