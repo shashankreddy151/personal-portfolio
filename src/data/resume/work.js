@@ -14,7 +14,7 @@
 const work = [
   {
     name: 'Mayo Clinic',
-    position: 'IT Data Engineer',
+    position: 'Software Developer',
     url: 'https://www.mayoclinic.org/', // Replace with the actual URL if available
     startDate: '2024-02-01',
     endDate: '2024-10-30',
@@ -28,7 +28,7 @@ const work = [
   },
   {
     name: 'Virinchi Technologies',
-    position: 'Data Analyst',
+    position: 'Software Developer',
     url: 'https://www.virinchi.com/', // Replace with the actual URL if available
     startDate: '2020-08-01',
     endDate: '2022-09-30',
@@ -41,7 +41,7 @@ const work = [
   },
   {
     name: 'NeoApp Technologies',
-    position: 'Data Analyst Intern',
+    position: 'Software Developer Intern',
     url: 'https://www.neoapptech.com/', // Replace with the actual URL if available
     startDate: '2019-06-01',
     endDate: '2020-07-31',
