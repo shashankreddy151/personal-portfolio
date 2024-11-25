@@ -13,42 +13,51 @@
  */
 const work = [
   {
-    name: 'Mayo Clinic',
-    position: 'Software Developer',
-    url: 'https://www.mayoclinic.org/', // Replace with the actual URL if available
+    name: 'DataArt',
+    position: 'Business Analyst',
+    url: 'https://www.dataart.com/', // Replace with the actual URL if available
     startDate: '2024-02-01',
-    endDate: '2024-10-30',
-    summary: 'Designing and implementing data solutions to enhance analytics and operational efficiency.',
+    endDate: 'Present',
+    summary: 'Collaborating with stakeholders to develop and implement data-driven software solutions.',
     highlights: [
-      'Data Pipeline Development: Designed and implemented scalable ETL pipelines using AWS Glue and Lambda, improving data processing efficiency by 30%.',
-      'Machine Learning Integration: Developed and deployed machine learning models for real-time analytics, resulting in a 25% increase in campaign response rates through personalized interventions.',
-      'Collaboration on AI Solutions: Worked closely with data scientists and product managers to design AI-driven marketing solutions, improving campaign performance by 20% in six months.',
-      'Data Quality Assurance: Established and maintained data validation frameworks, improving data accuracy by 15%.',
+      'Stakeholder Collaboration: Partnered with 10+ stakeholders to document and deliver tailored software solutions, increasing client satisfaction by 20%.',
+      'Dashboard Development: Designed and deployed 20+ Tableau and Power BI dashboards, reducing reporting time by 30% and cutting operational costs by 12%.',
+      'Workflow Automation: Streamlined workflows, saving 300+ hours annually and reducing operational errors by 15%.',
+      'Customer Segmentation: Implemented customer segmentation strategies, boosting marketing ROI by 20% through targeted campaigns.',
+      'Data Governance: Established robust governance policies, ensuring 98% data accuracy and compliance with industry regulations.',
+      'Predictive Analytics: Led the development of predictive models, identifying growth opportunities that increased revenue by 10%.',
     ],
   },
   {
-    name: 'Virinchi Technologies',
-    position: 'Software Developer',
-    url: 'https://www.virinchi.com/', // Replace with the actual URL if available
-    startDate: '2020-08-01',
-    endDate: '2022-09-30',
-    summary: 'Analyzed data to drive business improvements and optimize marketing strategies.',
-    highlights: [
-      'Customer Segmentation: Utilized SQL and Python for customer segmentation, increasing targeted marketing effectiveness by 25%.',
-      'Data Visualization: Developed interactive dashboards and reports in Tableau, enabling data-driven decisions that reduced campaign costs by 30%.',
-      'Automated Reporting: Automated reporting and data extraction workflows, reducing manual processes by 40%.',
-    ],
-  },
-  {
-    name: 'NeoApp Technologies',
-    position: 'Software Developer Intern',
-    url: 'https://www.neoapptech.com/', // Replace with the actual URL if available
+    name: 'Data Economy',
+    position: 'Data Analyst',
+    url: 'https://www.dataeconomy.com/', // Replace with the actual URL if available
     startDate: '2019-06-01',
-    endDate: '2020-07-31',
-    summary: 'Gained hands-on experience in data analytics and predictive modeling.',
+    endDate: '2022-08-31',
+    summary: 'Analyzed and visualized data to enhance operational efficiency and support business decisions.',
     highlights: [
-      'Predictive Modeling: Developed predictive models to identify key customer behaviors, improving customer retention by 15%.',
-      'NLP Analytics: Implemented Natural Language Processing (NLP) techniques to analyze customer feedback, providing actionable insights that increased customer satisfaction by 10%.',
+      'SQL Development: Wrote complex SQL queries to process datasets and generate insights, increasing data retrieval efficiency by 40%.',
+      'Risk Management: Conducted operational and market risk assessments, mitigating compliance risks by 20%.',
+      'Data Visualization: Developed 15+ interactive dashboards using Tableau and Power BI, increasing transparency across teams by 35%.',
+      'Predictive Modeling: Built predictive models to enhance forecasting accuracy, resulting in a 15% improvement in planning efficiency.',
+      'Collaboration: Collaborated with 30+ stakeholders to identify gaps and implement data solutions, improving decision-making.',
+      'Process Improvement: Optimized ETL processes, saving 200+ hours annually and improving data reliability by 30%.',
+    ],
+  },
+  {
+    name: 'Applied Data Finance',
+    position: 'Junior Analyst - Business Process (Internship)',
+    url: 'https://www.applieddatafinance.com/', // Replace with the actual URL if available
+    startDate: '2019-01-01',
+    endDate: '2019-05-31',
+    summary: 'Gained experience in business process improvement and data-driven decision-making.',
+    highlights: [
+      'Data Cleaning: Improved data accuracy by 30% through rigorous cleaning and transformation of large datasets.',
+      'Dashboard Creation: Developed Power BI dashboards, reducing manual reporting time by 20%.',
+      'SQL Querying: Designed SQL scripts to automate data extraction and streamline ETL processes, enhancing reporting speed by 15%.',
+      'Market Analysis: Analyzed marketing datasets, boosting campaign ROI by 10% through actionable insights.',
+      'Ad-hoc Reporting: Performed ad-hoc analyses to support executive decision-making, enhancing operational efficiency.',
+      'Process Documentation: Documented 10+ business processes, streamlining workflows and improving team collaboration by 25%.',
     ],
   },
 ];
