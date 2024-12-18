@@ -13,47 +13,33 @@
  */
 const work = [
   {
-    name: 'Mayo Clinic',
-    position: 'Business Intelligence Analyst',
-    url: 'https://www.mayoclinic.org/', // Replace with the actual URL if available
-    startDate: '2024-02-01',
-    endDate: 'Present',
-    summary: 'Develop and maintain BI dashboards, support Epic analytics, and analyze healthcare datasets for actionable insights.',
-    highlights: [
-      'Developed and maintained 15+ BI dashboards in Tableau, providing actionable insights to clinical and operational teams.',
-      'Supported Epic system analytics by leveraging Clarity and Caboodle, enhancing reporting capabilities.',
-      'Analyzed healthcare datasets using SQL, identifying trends that improved patient care protocols.',
-    ],
-  },
-  {
-    name: 'Virinchi Technologies Limited',
-    position: 'Data Analyst',
-    url: 'https://www.virinchi.com/', // Replace with the actual URL if available
-    startDate: '2020-08-01',
+    name: 'Virinchi Technologies',
+    position: 'Software Developer',
+    url: 'https://www.virinchi.com/',
+    startDate: '2021-08-01',
     endDate: '2022-09-30',
-    summary: 'Extracted, analyzed, and visualized data to support key business initiatives.',
+    summary: 'Enhanced software quality and optimized workflows, supporting scalable software applications.',
     highlights: [
-      'Created complex SQL queries to extract and analyze data, supporting key business initiatives.',
-      'Built interactive Tableau dashboards to visualize trends and KPIs for senior leadership.',
-      'Assisted in developing data models and implementing data governance processes.',
-      'Delivered ad-hoc analyses and reports, enhancing reporting efficiency by 30%.',
+      'Designed and documented 50+ test scenarios to validate business requirements and map test cases to system functionality.',
+      'Executed data validation techniques and optimized database queries, improving query performance by 40%.',
+      'Collaborated with development teams to improve product features, increasing system scalability by 30%.',
+      'Streamlined project workflows using Agile methodologies, reducing delivery time by 25%.',
     ],
   },
   {
-    name: 'NeoApp Technologies Pvt. Ltd.',
-    position: 'Data Analyst Intern',
-    url: 'https://www.neoapptechnologies.com/', // Replace with the actual URL if available
-    startDate: '2019-06-01',
-    endDate: '2020-07-31',
-    summary: 'Supported business intelligence initiatives through data analysis and visualization.',
+    name: 'NeoApp Technologies',
+    position: 'Software Developer Intern',
+    url: 'https://www.neoapptechnologies.com/',
+    startDate: '2021-02-01',
+    endDate: '2021-07-31',
+    summary: 'Developed and executed QA processes to enhance software usability and reduce bugs.',
     highlights: [
-      'Designed and implemented SQL queries for data extraction and reporting.',
-      'Created Tableau dashboards for operational insights.',
-      'Conducted data analysis to improve data accuracy by 20%.',
-      'Collaborated with cross-functional teams to support business intelligence initiatives.',
+      'Designed and executed QA processes for 10+ new product features, reducing bugs by 30%.',
+      'Validated integration requirements and resolved data discrepancies, improving data accuracy by 20%.',
+      'Collaborated with senior developers to implement RESTful APIs, aligning test scenarios with business needs.',
+      'Enhanced software usability by designing user-friendly interfaces, increasing client satisfaction by 15%.',
     ],
   },
 ];
-
 
 export default work;
