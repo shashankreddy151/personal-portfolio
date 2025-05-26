@@ -37,28 +37,42 @@ const MenuIcon = () => (
 export default function Header() {
   const [dark, setDark] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false);
   const router = useRouter()
 
   // on mount, read user pref
   useEffect(() => {
-    const stored = localStorage.getItem('dark')
-    if (stored !== null) setDark(stored === 'true')
-    else setDark(window.matchMedia('(prefers-color-scheme: dark)').matches)
+    setMounted(true);
+    // Always sync with localStorage and system preference
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark') setDark(true);
+    else if (stored === 'light') setDark(false);
+    else setDark(window.matchMedia('(prefers-color-scheme: dark)').matches);
   }, [])
 
-  // whenever it flips, update <html> and storage
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark)
-    localStorage.setItem('dark', dark.toString())
+    if (dark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
   }, [dark])
 
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
+    { href: '/resume', label: 'Resume' },
+    { href: '/projects', label: 'Projects' },
     { href: '/contact', label: 'Contact' },
+    { href: '/stats', label: 'Stats' },
+    { href: '/interests', label: 'Interests' },
   ]
 
   const isActive = (path: string) => router.pathname === path
+
+  if (!mounted) return null;
 
   return (
     <header className="py-6 px-6 sm:px-12 lg:px-24 bg-background dark:bg-background text-text dark:text-text border-b border-accent border-opacity-20">
@@ -68,15 +82,14 @@ export default function Header() {
             My Portfolio
           </motion.span>
         </Link>
-        
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-10">
+        <nav className="hidden md:flex items-center space-x-8 lg:space-x-12">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`font-medium hover:text-accent transition-colors ${
-                isActive(link.href) ? 'text-accent' : 'text-text-light dark:text-text-light'
+              className={`font-medium hover:text-accent transition-colors px-2 py-1 rounded-lg ${
+                isActive(link.href) ? 'text-accent bg-accent bg-opacity-10' : 'text-text-light dark:text-text-light'
               }`}
             >
               {link.label}
@@ -87,12 +100,11 @@ export default function Header() {
             whileTap={{ scale: 0.95 }}
             onClick={() => setDark(d => !d)}
             aria-label="Toggle dark mode"
-            className="p-2.5 rounded-full bg-accent bg-opacity-10 text-accent focus:outline-none hover:bg-opacity-20 transition-colors"
+            className="p-2.5 rounded-full bg-accent bg-opacity-10 text-accent focus:outline-none hover:bg-opacity-20 transition-colors ml-4"
           >
             {dark ? <SunIcon /> : <MoonIcon />}
           </motion.button>
         </nav>
-
         {/* Mobile Navigation Toggle */}
         <div className="flex items-center space-x-4 md:hidden">
           <motion.button
@@ -113,7 +125,6 @@ export default function Header() {
           </motion.button>
         </div>
       </div>
-
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
         <motion.div
@@ -127,8 +138,8 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-medium py-2 ${
-                  isActive(link.href) ? 'text-accent' : 'text-text-light dark:text-text-light'
+                className={`font-medium py-2 px-2 rounded-lg ${
+                  isActive(link.href) ? 'text-accent bg-accent bg-opacity-10' : 'text-text-light dark:text-text-light'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >

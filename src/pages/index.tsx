@@ -69,18 +69,79 @@ type Repo = {
 
 export default function Home() {
   const [repos, setRepos] = useState<Repo[] | null>(null)
-  
+
+  // Fallback static data for local/dev or fetch failure
+  const fallbackRepos: Repo[] = [
+    {
+      id: 1,
+      name: 'Sample Project 1',
+      html_url: 'https://github.com/YOUR_GITHUB_USERNAME/sample-project-1',
+      description: 'A sample project description.',
+      topics: ['nextjs', 'typescript', 'portfolio']
+    },
+    {
+      id: 2,
+      name: 'Sample Project 2',
+      html_url: 'https://github.com/YOUR_GITHUB_USERNAME/sample-project-2',
+      description: 'Another sample project.',
+      topics: ['react', 'tailwind', 'demo']
+    },
+    {
+      id: 3,
+      name: 'Sample Project 3',
+      html_url: 'https://github.com/YOUR_GITHUB_USERNAME/sample-project-3',
+      description: 'Yet another project.',
+      topics: ['api', 'node', 'example']
+    },
+    {
+      id: 4,
+      name: 'Sample Project 4',
+      html_url: 'https://github.com/YOUR_GITHUB_USERNAME/sample-project-4',
+      description: 'A fourth sample project.',
+      topics: ['design', 'figma', 'ui']
+    }
+  ]
+
   useEffect(() => {
     async function loadRepos(): Promise<void> {
       try {
-        // Use a public GitHub account with sample repositories for the demo
         const res = await fetch('https://api.github.com/users/github/repos?sort=updated&per_page=4')
+        if (!res.ok) throw new Error('GitHub API error')
         const data: Repo[] = await res.json()
-        // Using GitHub's public repos for demonstration
-        setRepos(data?.slice(0, 4) || []) // Only get first 4 repos
+        setRepos(data?.slice(0, 4) || [])
       } catch (error) {
         console.error('Failed to fetch repositories:', error)
-        setRepos([])
+        // Fallback static projects
+        setRepos([
+          {
+            id: 1,
+            name: 'Portfolio Website',
+            html_url: 'https://github.com/example/portfolio',
+            description: 'A modern portfolio built with Next.js, Tailwind CSS, and Framer Motion.',
+            topics: ['Next.js', 'Tailwind', 'Framer Motion']
+          },
+          {
+            id: 2,
+            name: 'API Starter',
+            html_url: 'https://github.com/example/api-starter',
+            description: 'A boilerplate Node.js/Express REST API with TypeScript.',
+            topics: ['Node.js', 'Express', 'TypeScript']
+          },
+          {
+            id: 3,
+            name: 'Open Source CLI',
+            html_url: 'https://github.com/example/cli-tool',
+            description: 'A handy CLI tool for developers, written in TypeScript.',
+            topics: ['CLI', 'TypeScript']
+          },
+          {
+            id: 4,
+            name: 'UI Component Library',
+            html_url: 'https://github.com/example/ui-library',
+            description: 'Reusable React UI components with full TypeScript support.',
+            topics: ['React', 'UI', 'TypeScript']
+          }
+        ])
       }
     }
     loadRepos()
