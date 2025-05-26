@@ -1,51 +1,143 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+'use client'
 
-const toggleDarkMode = () => {
-  if (typeof window !== 'undefined') {
-    const root = window.document.documentElement;
-    const isDark = root.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  }
-};
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
-export const Header: React.FC = () => {
-  const [isDark, setIsDark] = useState(false);
+// SVG icons using inline SVG for better compatibility
+const SunIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+)
 
+const MoonIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+)
+
+const MenuIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="4" y1="12" x2="20" y2="12"></line>
+    <line x1="4" y1="6" x2="20" y2="6"></line>
+    <line x1="4" y1="18" x2="20" y2="18"></line>
+  </svg>
+)
+
+export default function Header() {
+  const [dark, setDark] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const router = useRouter()
+
+  // on mount, read user pref
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const theme = localStorage.getItem('theme');
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-        setIsDark(true);
-      } else {
-        document.documentElement.classList.remove('dark');
-        setIsDark(false);
-      }
-    }
-  }, []);
+    const stored = localStorage.getItem('dark')
+    if (stored !== null) setDark(stored === 'true')
+    else setDark(window.matchMedia('(prefers-color-scheme: dark)').matches)
+  }, [])
 
-  const handleToggle = () => {
-    setIsDark((prev) => !prev);
-    toggleDarkMode();
-  };
+  // whenever it flips, update <html> and storage
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', dark)
+    localStorage.setItem('dark', dark.toString())
+  }, [dark])
+
+  const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
+  ]
+
+  const isActive = (path: string) => router.pathname === path
 
   return (
-    <header className="w-full flex justify-between items-center py-6 px-8 bg-background dark:bg-background text-text dark:text-text border-b border-accent">
-      <motion.h1 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className="text-2xl font-bold">
-        My Portfolio
-      </motion.h1>
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={handleToggle}
-        aria-label="Toggle dark mode"
-        className="p-2 rounded bg-accent text-background dark:text-background focus:outline-none"
-      >
-        {isDark ? '🌙' : '☀️'}
-      </motion.button>
-    </header>
-  );
-};
+    <header className="py-6 px-6 sm:px-12 lg:px-24 bg-background dark:bg-background text-text dark:text-text border-b border-accent border-opacity-20">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <Link href="/" className="text-2xl font-bold text-accent">
+          <motion.span whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+            My Portfolio
+          </motion.span>
+        </Link>
+        
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`font-medium hover:text-accent transition-colors ${
+                isActive(link.href) ? 'text-accent' : 'text-text-light dark:text-text-light'
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setDark(d => !d)}
+            aria-label="Toggle dark mode"
+            className="p-2.5 rounded-full bg-accent bg-opacity-10 text-accent focus:outline-none hover:bg-opacity-20 transition-colors"
+          >
+            {dark ? <SunIcon /> : <MoonIcon />}
+          </motion.button>
+        </nav>
 
-export default Header;
+        {/* Mobile Navigation Toggle */}
+        <div className="flex items-center space-x-4 md:hidden">
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setDark(d => !d)}
+            aria-label="Toggle dark mode"
+            className="p-2 rounded-full bg-accent bg-opacity-10 text-accent focus:outline-none"
+          >
+            {dark ? <SunIcon /> : <MoonIcon />}
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+            className="p-2 rounded bg-accent bg-opacity-10 text-accent focus:outline-none"
+          >
+            <MenuIcon />
+          </motion.button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      {mobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          className="md:hidden pt-4 pb-2 px-6"
+        >
+          <nav className="flex flex-col space-y-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`font-medium py-2 ${
+                  isActive(link.href) ? 'text-accent' : 'text-text-light dark:text-text-light'
+                }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </motion.div>
+      )}
+    </header>
+  )
+}

@@ -19,7 +19,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, ur
     whileTap={{ scale: 0.98 }}
   >
     <div className="relative w-full h-48">
-      <Image src={image} alt={title} layout="fill" objectFit="cover" />
+      <Image 
+        src={image} 
+        alt={title} 
+        fill
+        style={{objectFit: 'cover'}}
+        className="opacity-80 dark:opacity-60"
+      />
     </div>
     <div className="p-4">
       <h3 className="text-xl font-semibold text-accent mb-2">{title}</h3>
