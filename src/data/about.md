@@ -1,92 +1,53 @@
 # Intro
 
-I am the co-founder and CTO of [Promptfoo](https://promptfoo.dev), where we're building open-source tools to evaluate, find, and fix vulnerabilities in LLMs. Before Promptfoo, I was the VP of Engineering at [SmileID](https://www.usesmileid.com), where I led the development of tools that have helped over 170 million people in Africa gain access to financial services. I also co-founded [Arthena](https://arthena.com) and [Matroid](https://matroid.com).
+I am a graduate student at the [New Jersey Institute of Technology (NJIT)](https://ds.njit.edu/ms-data-science), holding a Master's degree in Data Science. With a strong interest in machine learning and deep learning, I am dedicated to exploring innovative ways to leverage neural networks for model training. My academic journey has equipped me with a solid foundation in data analysis, algorithm development, and the practical applications of artificial intelligence. 
 
-In my spare time, I enjoy investing in people and ideas through a [small venture fund](https://skepticalinvestments.biz), focusing on projects with high social impact. If you think I can be helpful to you or your cause, or if you're interested in collaborating, feel free to get in touch.
+In addition to my studies, I enjoy collaborating on projects that involve real-world data challenges, and I am eager to contribute to advancements in technology that have a meaningful impact on society. 
+
 
 # Some History
 
-- My parents put a computer in my bedroom in 1993 when I was 3. It was an old Tandy that ran MS-DOS. My favorite games were Street Rod 2, Wolfenstein 3D, and Tom and Jerry. It had a mechanical keyboard and a turbo button. To this day, I still don't know what pressing the turbo button really did.
-- We subscribed to AOL in 1995. I still remember installing it from a floppy disk onto our brand-new Packard Bell. It took years for me to send my first email.
-- In the summer of 1996, my uncle purchased [MegaRace](https://en.wikipedia.org/wiki/MegaRace) from [Media Play](https://en.wikipedia.org/wiki/Media_Play) and installed it on my mom's work computer. I might have endangered her business by using her computer too much.
-- At 7, I discovered the mini-games hidden in Microsoft Office. I also beat Minesweeper on expert for the first time.
-- At 8, my parents bought me a Sony Mavica MVC-FD71 digital camera after I stole their SLR one too many times. It could fit 10 images to a floppy disk at a 0.3MP resolution. I still have it, and it still works. I've been taking photographs ever since, now with a Nikon D750, D800, and occasionally with a Mamiya 6II.
-- At 10, I built my first website with Microsoft FrontPage on our Pentium III [Gateway](https://en.wikipedia.org/wiki/Gateway,_Inc.). My website was terrible.
-- I was 11 when I built my first [Tesla Coil](https://en.wikipedia.org/wiki/Tesla_coil) (without my parents' permission). Over the next few years, I built several more, including one of the first audio modulated coils and one of the first DRSSTCs.
-- When I was 12, I set the all-time high record at my local laser tag facility by reverse engineering the charging station and weapon protocols with a photo-resistor, micro-cassette recorder, and a lot of patience. I was unstoppable.
-- At 13, I went to space camp and fell in love. I went back two more times and promised myself that I'd work in space. I've since helped build three generations of satellites and have contributed to two more.
-- At 14, I was almost expelled for finding a backdoor into my high school's file server and telling everyone but the faculty members about it. Later that year, I figured out how to turn off the internet firewall by editing system registry keys. I anonymously shared my work months later.
-- At 16, I participated in a foreign exchange program in Dortmund, Germany. Since then, I've gone back almost every year.
-- 14 - 17, I played a lot of video games. My favorites included Counter-Strike Source, Command and Conquer 3, Halo 2, and Age of Empires II.
-- At 18, in the summer before college, my friends and I started playing [Muggle Quidditch](<https://en.wikipedia.org/wiki/Quidditch_(sport)>). We went on to start over 8 teams in the [International Quidditch Association](https://en.wikipedia.org/wiki/International_Quidditch_Association), including the [Buffalo Quidditch Society](https://www.facebook.com/buffaloquidditch/). At our height, we were ranked third in the IQA. Although I don't play anymore, you can still see pictures of me holding a broom while wearing a chess camp t-shirt on Facebook.
-- At 19, I took my first graduate course and published my first academic paper.
-- At 20, I co-authored a grant to build a satellite and managed a 60+ person team for the next two years. You can read more about that [here](https://ubnl.space/glados/).
+- At 8, growing up in a village, my tech access was like a rare Pokémon—hard to find! I could only hit the school computer once a week. But hey, necessity is the mother of invention, right? I often found myself dismantling electronic toys to see what made them tick. Spoiler alert: most of them didn't tick after that!
 
-Ask me in person for other stories that I'm afraid to share with the internet.
+- At 20, I finally snagged my first computer while studying Electronics and Communication Engineering. Picture me with a wide grin, exploring my shiny new machine! My cousin, a tech wizard, helped me pick the right one and introduced me to various operating systems. I dived headfirst into Linux and Ubuntu, navigating the terminal like I was on a treasure hunt. Pro tip: Don't forget to document every command—turns out, some treasures are hard to find again!
+
+- At 21, I began my Bachelor’s degree at [Sreyas Institute of Engineering and Technology](https://sreyas.ac.in/), initially struggling with a GPA that felt more like a plateau than a stepping stone. However, everything changed when I discovered my passion for coding, thanks to a supportive professor who inspired me to dive into algorithms and Arduino projects. With newfound enthusiasm, I transformed my academic experience from “meh” to “wow!” and I began to improve my grades while enthusiastically sharing my projects, much like an artist proudly displaying their work in a gallery.
+
+- At 22, I was a Student Intern at [Electronics Corporation of India Limited (ECIL)](https://www.ecil.co.in/), where I led the development of an AI-powered traffic management system in Hyderabad. We managed to boost traffic flow by 20%—which felt like turning a chaotic rush hour into a stroll through the park! I implemented computer vision techniques to detect vehicle density, giving our system some serious “see-through” powers. Plus, I used reinforcement learning to adjust signal timings, ensuring drivers weren’t just playing “red light, green light.” Collaborating with my amazing team, we deployed the solution using OpenCV and Python, proving that tech can help us beat the traffic game. After all, who doesn’t want to play the role of a digital traffic cop?
+
+- At 23, the pandemic was like a surprise pop quiz—stressful, unpredictable, and a little too real. As classes moved online, I became best buddies with Zoom, Google Meet, and Microsoft Teams. I learned cloud technologies and realized that even in chaos, there were opportunities to grow. I may have completed my Bachelor’s during a pandemic, but I came out stronger, like a phoenix rising from the ashes—or a student who finally figured out how to make the perfect cup of instant noodles!
+
+- At 24, I jumped into the job market, applying for various positions but faced a string of rejections that tested my resolve. After a tough start, I took my first shot at getting a U.S. visa in Mumbai—but on June 7th, I faced disappointment when my application was rejected. Undeterred, I kept applying for jobs and eventually set my sights on a Networking Engineer role at Amazon. I managed to clear two technical rounds, but by the time I received their response, I had already secured a second chance for my visa. just when I thought my dreams of coming to the U.S. were slipping away, fate smiled upon me! I passed another interview, and the following week, a golden visa slot appeared. I hopped on a flight to Delhi, accompanied by my trusty friends for moral support (and good company). On August 26th, I successfully obtained my visa and flew to the U.S. on September 4th. My first big splurge? A $6 luggage cart at the airport. Talk about starting off on a high note!
+
+- At 25, I embarked on my first semester in a Master’s in Data Science at [New Jersey Institute of Technology](https://www.njit.edu/), diving headfirst into algorithms and data analytics. Classes began on September 6th, and talk about culture shock! The U.S. education system was a wild ride—no more sitting in the same class all day with the same professors. I suddenly had the freedom to choose my classes and professors. While the first semester was a bit rocky—like trying to navigate a maze blindfolded—I managed to find my way through. In my first semester, in Data Analytics with R programming language, my professor introduced us to Kaggle competitions and assigned us the Digit Recognizer project. I learned about neural networks and trained one from scratch, finishing in the top 20 of that competition. That was my first achievement in my Master’s!
+
+- By 26, I was hitting my stride in my second semester. Thanks to Professor Matt Toegel, who introduced me to GitHub, I became a documentation enthusiast. He taught me that documenting my projects was as vital as my caffeine intake during finals week. My GitHub transformed into a digital scrapbook filled with my projects and code snippets—proof that I had been busy, even when Netflix tried to distract me! I graduated with my Master’s in Data Science in December 2023, proudly flaunting a CGPA of 3.33. Not too shabby for a kid who started with an average GPA! With my degree in hand, I shifted my focus to job hunting, zeroing in on opportunities in machine learning engineering and deep learning. As I stepped into the professional world, my commitment to lifelong learning remained strong. I continued to stay updated with the latest in AI and machine learning, documenting everything on GitHub, sharing knowledge, and collaborating with others. Because at the end of the day, learning is a journey, and I was ready for the next adventure!
+
 
 # I Like
+- Photography
+- Hiking at sunrise or sunset
+- Movies
+- Documentaries
+- Visiting planetariums or science museums
+- Camping
+- Learning astrophotography
+- Beach volleyball
+- Collecting Currency
+- Solar eclipse viewing
+- Playing video games
 
-- Running
-- Skiing
-- Sailing and the sea
-- Space
-- Summer
-- [Books](https://www.goodreads.com/mdangelo)
-- Colored pencils ([Faber-Castell Polychromos](https://www.faber-castell.com/products/art-and-graphic/polychromos))
-- Podcasts ([The Daily](https://www.nytimes.com/column/the-daily), [The Ezra Klein Show](https://www.nytimes.com/column/ezra-klein-podcast), [Planet Money](https://www.npr.org/sections/money/), [The Indicator](https://www.npr.org/podcasts/510325/the-indicator-from-planet-money), [This American Life](https://www.thisamericanlife.org/), [99% Invisible](https://99percentinvisible.org/episodes/), [The Economist](http://radio.economist.com/), [Radiolab](https://www.wnycstudios.org/shows/radiolab), [Hidden Brain](https://www.npr.org/series/423302056/hidden-brain), [Inquiring Minds](https://inquiring.show), and others)
-- [Good design](/)
-- [Photography](https://instagram.com/dangelosaurus)
+# Some of My Favorite Podcasts
+- [Joe Rogan Experience - Graham Hancock & Randall Carlson](https://youtu.be/0H5LCLljJho?si=LY_ryOrqB-5Hu5eb)
+- [Nilesh Nilkanth UNTOLD Realities Of Mahabharat, Ramayana & Lost History](https://youtu.be/ptxJDBfO42w?si=JezPVzgp2lvRWqgg)
+- [Modern Tools That Decode Mahabharata & Ramayana](https://youtu.be/LHLaP7g1SaA?si=th9Qc3OtO95Wp4o0)
+- [Krishna - Story of Birth, Life, Love, Death & Tantra | Vinay Varanasi](https://youtu.be/HEAZF_aUkRU?si=ArQmjPk_qlo1q80_)
+- [The REAL Life & Times Of Krishna - Nilesh Oak](https://youtu.be/MO50SFyVDMk?si=LJFrXk64pi3aIpij)
 
 # Travel / Geography
 
-- I am originally from Buffalo, New York. I have since lived in Palo Alto, Mountain View, San Francisco, Seattle, and New York City.
-- I've been to approximately 50 countries, some of which I have forgotten, many of which I would like to revisit.
-- In 2016, I visited Canada, Ethiopia, Austria, Germany, Belgium, Ireland, Northern Ireland, Italy, Romania, Sweden, Norway, Svalbard, Panama, Costa Rica, Uganda, Japan, and the UAE, mostly in that order.
-- In 2017, I visited Canada, Japan, Denmark, Germany, Sweden, Estonia, Russia, the Netherlands, Belgium, the U.K., Spain, Iceland, France, Switzerland, Ethiopia, and Luxembourg.
-- In 2018, I visited Canada, France, Italy, Israel, and the U.K.
-- In 2019, I visited Canada, England, France, and Switzerland.
-- In 2020, I traveled barely 20 blocks. I stayed in New York and remodeled an apartment.
-- In 2021, I continued remodeling an apartment.
-- In 2022, I switched jobs and visited the UK, France, Greece, Belgium, Luxembourg, Germany, and Kenya.
-- In 2023, I visited France, the UK, Ireland, and Rwanda.
-- I am an Oregon Trail II enthusiast.
+- I was born in Hyderabad, Telangana, India, a city rich in history, culture, and vibrant traditions. Known as the “City of Pearls,” Hyderabad blends its royal heritage with modern development. The city is famous for its iconic landmarks like the Charminar and Golkonda Fort, and it's also home to delicious cuisine, especially the world-renowned Hyderabadi biryani. Additionally, Hyderabad has established itself as a major IT hub, with HITEC City symbolizing its modern economic growth.
 
-# Fun Facts
+- I spent my childhood in a small village in Telangana, surrounded by lush greenery and the soothing sounds of nature. Growing up in a rural setting, I developed a deep appreciation for nature and simplicity, which shaped my outlook on life.
 
-- I have a list of thousands of ideas, like creating matching bow ties for cats and humans.
-- I almost always have a sketchbook with me and a [01 Sakura Pigma Micron Pen](https://www.sakuraofamerica.com/product/pigma-micron/).
-- I can't locate every country on a map.
-- I operate a [small angel fund](http://skepticalinvestments.biz/) with terrible returns.
-- I break about 30 traffic laws on a skateboard or [bicycle](https://www.citibikenyc.com/) every single day.
-- I stack-rank coffee shops, restaurants, and every dog I see in New York.
-- I added this page because many people complained that my site was just my resume.
-
-# I Dream Of
-
-- Inspiring and feeling inspired.
-- Enabling a brighter future for everyone, regardless of political or socioeconomic status.
-- Treating every individual with genuine kindness and respect.
-- Staying curious.
-- Continually improving.
-- You not checking the commit history for earlier drafts of this file.
-
-# Websites from People I Admire
-
-- [Alex Peysakhovich](http://alexpeys.github.io/)
-- [Chris Lengerich](http://www.chrislengerich.com/)
-- [Chris Saad](https://www.chrissaad.com/)
-- [Duncan Tomlin](http://duncantomlin.com/)
-- [Ed Kearney](https://edkearney.com/)
-- [Hawley Moore](http://hawleymoore.com/)
-- [Holman Gao](https://golmansax.com/)
-- [Ian Webster](http://ianww.com/)
-- [Johanna Flato](https://www.johannaflato.com/)
-- [Judy Mou](http://www.judymou.com/)
-- [Judy Suh](https://www.judysuh.com/)
-- [Kristina Monakhova](https://kristinamonakhova.com/)
-- [Noah Trueblood](http://notrueblood.com/)
-- [Ruoxi Wang](http://ruoxiw.com/)
-- [Tom Sachs](https://www.tomsachs.org/)
-- [Will Holley](https://willholley.com/)
-
-If we are friends and you feel like you belong on this list, you're probably right. Submit a PR, or ask me, and I'll add you.
+- I’ve traveled to various places across India, experiencing the vibrant energy of Mumbai, the historical richness of Delhi, and the coastal beauty of Goa and Kerala. I’ve also explored the southernmost tip of India in Kanyakumari, the scenic beaches of Visakhapatnam (Vizag), and the unique charm of smaller towns like Bhimavaram. Each destination has offered me a glimpse into the diverse landscapes, cultures, and traditions that make India so extraordinary. These journeys have enriched my perspective and deepened my connection with the vast and vibrant tapestry of India.
