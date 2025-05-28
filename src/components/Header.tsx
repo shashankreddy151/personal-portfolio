@@ -34,31 +34,46 @@ const MenuIcon = () => (
   </svg>
 )
 
-export default function Header() {
+interface HeaderProps {
+  theme?: 'light' | 'dark';
+  setTheme?: (t: 'light' | 'dark') => void;
+}
+
+export default function Header(props: HeaderProps) {
   const [dark, setDark] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false)
   const router = useRouter()
+
+  // If theme/setTheme are provided as props, use them; otherwise, use local state
+  const effectiveDark = props.theme ? props.theme === 'dark' : dark
+  const effectiveSetDark = props.setTheme
+    ? (v: boolean) => props.setTheme && props.setTheme(v ? 'dark' : 'light')
+    : setDark
 
   // on mount, read user pref
   useEffect(() => {
-    setMounted(true);
-    // Always sync with localStorage and system preference
-    const stored = localStorage.getItem('theme');
-    if (stored === 'dark') setDark(true);
-    else if (stored === 'light') setDark(false);
-    else setDark(window.matchMedia('(prefers-color-scheme: dark)').matches);
-  }, [])
+    setMounted(true)
+    if (!props.theme) {
+      // Always sync with localStorage and system preference
+      const stored = localStorage.getItem('theme')
+      if (stored === 'dark') setDark(true)
+      else if (stored === 'light') setDark(false)
+      else setDark(window.matchMedia('(prefers-color-scheme: dark)').matches)
+    }
+  }, [props.theme])
 
   useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+    if (!props.theme) {
+      if (dark) {
+        document.documentElement.classList.add('dark')
+        localStorage.setItem('theme', 'dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+        localStorage.setItem('theme', 'light')
+      }
     }
-  }, [dark])
+  }, [dark, props.theme])
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -72,7 +87,7 @@ export default function Header() {
 
   const isActive = (path: string) => router.pathname === path
 
-  if (!mounted) return null;
+  if (!mounted) return null
 
   return (
     <header className="py-6 px-6 sm:px-12 lg:px-24 bg-background dark:bg-background text-text dark:text-text border-b border-accent border-opacity-20">
