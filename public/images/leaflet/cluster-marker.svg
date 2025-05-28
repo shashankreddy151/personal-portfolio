@@ -1,0 +1,6 @@
+<svg width="36" height="48" viewBox="0 0 384 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Cluster Pin</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M192,0 C86.4,0 0,86.4 0,192 C0,297.6 192,512 192,512 C192,512 384,297.6 384,192 C384,86.4 297.6,0 192,0 Z M192,256 C153.6,256 121.6,224 121.6,185.6 C121.6,147.2 153.6,115.2 192,115.2 C230.4,115.2 262.4,147.2 262.4,185.6 C262.4,224 230.4,256 192,256 Z" fill="#666666" opacity="0.8"></path>
+    </g>
+</svg>

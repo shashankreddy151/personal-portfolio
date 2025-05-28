@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
+import TravelMap from '@/components/TravelMap';
 
 export default function Interests() {
   return (
@@ -49,17 +50,9 @@ export default function Interests() {
               <li>USA (NYC, San Francisco, Seattle)</li>
               <li>India (Delhi, Mumbai, Goa)</li>
             </ul>
-          </motion.section>
-
-          <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }} viewport={{ once: true }}>
-            <h2 className="text-2xl font-semibold text-accent mb-4">Food I Like</h2>
-            <ul className="list-disc pl-6 text-text-light dark:text-text-light space-y-2">
-              <li>Sushi</li>
-              <li>Pizza (Neapolitan style)</li>
-              <li>Indian curries</li>
-              <li>Ramen</li>
-              <li>Freshly baked bread</li>
-            </ul>
+            <div className="mt-8">
+              <TravelMap />
+            </div>
           </motion.section>
         </div>
       </main>
