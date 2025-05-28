@@ -4,9 +4,11 @@
 @import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 @import './map-styles.css'; /* Import custom map styles */
 
-/* Tailwind v4 base styles */
-@import 'tailwindcss/preflight';
-@import 'tailwindcss/utilities';
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   scroll-behavior: smooth;

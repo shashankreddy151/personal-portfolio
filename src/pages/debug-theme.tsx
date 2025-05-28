@@ -3,55 +3,60 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function DebugPage() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [htmlClasses, setHtmlClasses] = useState<string[]>([]);
-
+  const [theme, setTheme] = useState('');
+  const [htmlClasses, setHtmlClasses] = useState([]);
+  
   useEffect(() => {
     // Update on mount and every 500ms to see changes
     const checkTheme = () => {
       if (typeof window !== 'undefined') {
-        setTheme((localStorage.getItem('theme') as 'light' | 'dark') || 'light');
+        setTheme(localStorage.getItem('theme') || 'not set');
         setHtmlClasses([...document.documentElement.classList]);
       }
     };
+    
     checkTheme();
     const interval = setInterval(checkTheme, 500);
     return () => clearInterval(interval);
   }, []);
-
+  
   const toggleTheme = () => {
     const isDark = document.documentElement.classList.contains('dark');
+    
     if (isDark) {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
-      setTheme('light');
     } else {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
-      setTheme('dark');
     }
+    
+    // Update state
+    setTheme(localStorage.getItem('theme'));
     setHtmlClasses([...document.documentElement.classList]);
   };
-
-  const setThemeExplicitly = (mode: 'light' | 'dark') => {
+  
+  const setThemeExplicitly = (mode) => {
     if (mode === 'dark') {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
-      setTheme('dark');
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
-      setTheme('light');
     }
+    
+    // Update state
+    setTheme(localStorage.getItem('theme'));
     setHtmlClasses([...document.documentElement.classList]);
   };
-
+  
   return (
     <>
-      <Header theme={theme} setTheme={setTheme} />
+      <Header />
       <main className="min-h-[80vh] bg-background dark:bg-background-dark px-6 sm:px-12 lg:px-24 py-16">
         <div className="max-w-3xl mx-auto space-y-8">
           <h1 className="text-4xl font-bold text-text dark:text-text-dark">Theme Debug</h1>
+          
           <div className="p-6 rounded-lg bg-background-light dark:bg-background-dark-light">
             <h2 className="text-2xl font-semibold text-text dark:text-text-dark mb-4">Current State</h2>
             <div className="space-y-2">
@@ -66,6 +71,7 @@ export default function DebugPage() {
               </p>
             </div>
           </div>
+          
           <div className="p-6 rounded-lg bg-background-light dark:bg-background-dark-light">
             <h2 className="text-2xl font-semibold text-text dark:text-text-dark mb-4">Manual Controls</h2>
             <div className="space-y-4">
@@ -75,6 +81,7 @@ export default function DebugPage() {
               >
                 Toggle Theme
               </button>
+              
               <div className="flex space-x-4">
                 <button 
                   onClick={() => setThemeExplicitly('light')}
@@ -82,6 +89,7 @@ export default function DebugPage() {
                 >
                   Force Light Mode
                 </button>
+                
                 <button 
                   onClick={() => setThemeExplicitly('dark')}
                   className="px-4 py-2 rounded bg-purple-500 text-white"
@@ -91,6 +99,7 @@ export default function DebugPage() {
               </div>
             </div>
           </div>
+          
           <div className="p-6 rounded-lg bg-background-light dark:bg-background-dark-light">
             <h2 className="text-2xl font-semibold text-text dark:text-text-dark mb-4">Color Samples</h2>
             <div className="grid grid-cols-2 gap-4">
