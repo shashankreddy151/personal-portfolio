@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Markdown from 'markdown-to-jsx';
 
 import Main from '../layouts/Main';
@@ -8,12 +8,10 @@ const About = () => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    import('../data/about.md').then((res) => {
-      fetch(res.default)
-        .then((r) => r.text())
-        .then(setMarkdown);
-    });
-  });
+    fetch('/personal-portfolio/data/about.md')
+      .then((r) => r.text())
+      .then(setMarkdown);
+  }, []);
 
   const count = markdown
     .split(/\s+/)
@@ -26,7 +24,7 @@ const About = () => {
         <header>
           <div className="title">
             <h2>
-              <Link to="/about">About Me</Link>
+              <Link href="/about">About Me</Link>
             </h2>
             <p>(in about {count} words)</p>
           </div>

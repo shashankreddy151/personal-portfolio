@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import Main from '../layouts/Main';
 
@@ -15,7 +15,7 @@ const Index = () => (
         <header>
           <div className="title">
             <h2>
-              <Link to="/">About this site</Link>
+              <Link href="/">About this site</Link>
             </h2>
             <p>
               A beautiful, responsive, statically-generated, react application
@@ -26,10 +26,10 @@ const Index = () => (
         <p>
           {' '}
           Welcome to my website. Please feel free to read more{' '}
-          <Link to="/about">about me</Link>, or you can check out my{' '}
-          <Link to="/resume">resume</Link>, <Link to="/projects">projects</Link>,{' '}
-          view <Link to="/stats">site statistics</Link>, or{' '}
-          <Link to="/contact">contact</Link> me.
+          <Link href="/about">about me</Link>, or you can check out my{' '}
+          <Link href="/resume">resume</Link>, <Link href="/projects">projects</Link>,{' '}
+          view <Link href="/stats">site statistics</Link>, or{' '}
+          <Link href="/contact">contact</Link> me.
         </p>
         <p>
           {' '}

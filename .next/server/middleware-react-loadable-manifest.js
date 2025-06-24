@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"..\\components\\Template\\Hamburger.js -> react-burger-menu/lib/menus/slide":{id:6432,files:["static/chunks/432.56e6ee837897ee07.js"]}};

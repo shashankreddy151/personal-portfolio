@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import Main from '../layouts/Main';
 import EmailLink from '../components/Contact/EmailLink';
@@ -14,7 +14,7 @@ const Contact = () => (
       <header>
         <div className="title">
           <h2>
-            <Link to="/contact">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </h2>
         </div>
       </header>

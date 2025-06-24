@@ -14,46 +14,35 @@
 const work = [
   {
     name: 'Mayo Clinic',
-    position: 'Business Intelligence Analyst',
-    url: 'https://www.mayoclinic.org/', // Replace with the actual URL if available
+    position: 'AI-Focused Full Stack Developer',
+    url: 'https://www.mayoclinic.org/',
     startDate: '2024-02-01',
     endDate: 'Present',
-    summary: 'Develop and maintain BI dashboards, support Epic analytics, and analyze healthcare datasets for actionable insights.',
+    summary:
+      'Lead development of HIPAA-compliant healthcare applications, integrating AI/ML and full-stack features to enhance patient care systems.',
     highlights: [
-      'Developed and maintained 15+ BI dashboards in Tableau, providing actionable insights to clinical and operational teams.',
-      'Supported Epic system analytics by leveraging Clarity and Caboodle, enhancing reporting capabilities.',
-      'Analyzed healthcare datasets using SQL, identifying trends that improved patient care protocols.',
+      'Developed a comprehensive patient data management system serving 10,000+ patients.',
+      'Reduced data processing time by 40% through optimized database queries and caching.',
+      'Implemented a real-time notification system that improved staff response time by 25%.',
+      'Led a team of 3 developers in migrating legacy systems to a modern React-based architecture.',
     ],
   },
   {
-    name: 'Virinchi Technologies Limited',
-    position: 'Data Analyst',
-    url: 'https://www.virinchi.com/', // Replace with the actual URL if available
-    startDate: '2020-08-01',
-    endDate: '2022-09-30',
-    summary: 'Extracted, analyzed, and visualized data to support key business initiatives.',
+    name: 'New Jersey Institute of Technology',
+    position: 'Teaching Assistant – Data Science Department',
+    url: 'https://www.njit.edu/',
+    startDate: '2023-05-01',
+    endDate: '2023-12-31',
+    summary:
+      'Assisted in graduate-level Data Science courses with a focus on machine learning, statistical modeling, and Python programming.',
     highlights: [
-      'Created complex SQL queries to extract and analyze data, supporting key business initiatives.',
-      'Built interactive Tableau dashboards to visualize trends and KPIs for senior leadership.',
-      'Assisted in developing data models and implementing data governance processes.',
-      'Delivered ad-hoc analyses and reports, enhancing reporting efficiency by 30%.',
-    ],
-  },
-  {
-    name: 'NeoApp Technologies Pvt. Ltd.',
-    position: 'Data Analyst Intern',
-    url: 'https://www.neoapptechnologies.com/', // Replace with the actual URL if available
-    startDate: '2019-06-01',
-    endDate: '2020-07-31',
-    summary: 'Supported business intelligence initiatives through data analysis and visualization.',
-    highlights: [
-      'Designed and implemented SQL queries for data extraction and reporting.',
-      'Created Tableau dashboards for operational insights.',
-      'Conducted data analysis to improve data accuracy by 20%.',
-      'Collaborated with cross-functional teams to support business intelligence initiatives.',
+      'Conducted lab sessions for Machine Learning and Data Analytics, reinforcing theoretical concepts through hands-on coding.',
+      'Graded assignments and projects using tools like Python, Jupyter Notebook, and scikit-learn.',
+      'Supported students through one-on-one sessions, helping them understand complex algorithms and modeling techniques.',
     ],
   },
 ];
+
 
 
 export default work;

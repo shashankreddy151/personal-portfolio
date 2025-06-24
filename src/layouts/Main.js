@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import Head from 'next/head';
 
 import Analytics from '../components/Template/Analytics';
 import Navigation from '../components/Template/Navigation';
@@ -8,23 +8,19 @@ import SideBar from '../components/Template/SideBar';
 import ScrollToTop from '../components/Template/ScrollToTop';
 
 const Main = (props) => (
-  <HelmetProvider>
+  <>
     <Analytics />
     <ScrollToTop />
-    <Helmet
-      titleTemplate="%s | Shashank Reddy"
-      defaultTitle="Shashank Reddy"
-      defer={false}
-    >
-      {props.title && <title>{props.title}</title>}
+    <Head>
+      <title>{props.title ? `${props.title} | Shashank Reddy` : 'Shashank Reddy'}</title>
       <meta name="description" content={props.description} />
-    </Helmet>
+    </Head>
     <div id="wrapper">
       <Navigation />
       <div id="main">{props.children}</div>
       {props.fullPage ? null : <SideBar />}
     </div>
-  </HelmetProvider>
+  </>
 );
 
 Main.propTypes = {
