@@ -33,7 +33,7 @@ const About = () => (
             </div>
             <div className="md:w-2/3 space-y-4">
               <p className="text-lg text-text-light dark:text-text-light">
-                I'm a passionate developer with over 5 years of experience in building modern web applications. My journey in programming started during college, where I discovered my love for creating digital experiences that solve real-world problems.
+                I'm a passionate developer with over 1 year of experience in building modern web applications. My journey in programming started during college, where I discovered my love for creating digital experiences that solve real-world problems.
               </p>
               <p className="text-lg text-text-light dark:text-text-light">
                 After graduating with a degree in Computer Science, I joined a startup where I was responsible for developing interactive user interfaces using React and implementing server-side logic with Node.js. This role allowed me to refine my skills in full-stack development.
