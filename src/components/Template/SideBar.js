@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import ContactIcons from '../Contact/ContactIcons';
 
-const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
+// Use a relative path for images in Next.js static export
+const imagePath = '/personal-portfolio/images/me.jpg';
 
 const SideBar = () => {
   // Use a state to determine if we're on the client
@@ -15,7 +16,7 @@ const SideBar = () => {
     <section id="sidebar">
       <section id="intro">
         <Link href="/" className="logo">
-          <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
+          <img src={imagePath} alt="" />
         </Link>
         <header>
           <h2>Shashank Reddy</h2>
